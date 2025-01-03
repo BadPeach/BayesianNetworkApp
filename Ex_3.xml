@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>Gripa</NAME>
+	<OUTCOME>Da</OUTCOME>
+	<OUTCOME>Nu</OUTCOME>
+	<PROPERTY>position = (7256.734375, 5048.8154296875)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Abces</NAME>
+	<OUTCOME>Da</OUTCOME>
+	<OUTCOME>Nu</OUTCOME>
+	<PROPERTY>position = (7739.12890625, 5046.52880859375)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Febra</NAME>
+	<OUTCOME>Da</OUTCOME>
+	<OUTCOME>Nu</OUTCOME>
+	<PROPERTY>position = (7462.49462890625, 5213.423828125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Oboseala</NAME>
+	<OUTCOME>Da</OUTCOME>
+	<OUTCOME>Nu</OUTCOME>
+	<PROPERTY>position = (7211.0087890625, 5421.47119140625)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Anorexie</NAME>
+	<OUTCOME>Da</OUTCOME>
+	<OUTCOME>Nu</OUTCOME>
+	<PROPERTY>position = (7761.99169921875, 5414.61279296875)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>Gripa</FOR>
+	<TABLE>0.1 0.9</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Abces</FOR>
+	<TABLE>0.05 0.95</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Febra</FOR>
+	<GIVEN>Gripa</GIVEN>
+	<GIVEN>Abces</GIVEN>
+	<TABLE>0.8 0.2 0.7 0.3 0.25 0.75 0.05 0.95</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Oboseala</FOR>
+	<GIVEN>Febra</GIVEN>
+	<TABLE>0.6 0.4 0.2 0.8</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Anorexie</FOR>
+	<GIVEN>Febra</GIVEN>
+	<TABLE>0.5 0.5 0.1 0.9</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>

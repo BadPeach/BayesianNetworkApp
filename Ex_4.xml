@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>Sector 1</NAME>
+	<OUTCOME>B1</OUTCOME>
+	<OUTCOME>B2</OUTCOME>
+	<OUTCOME>B3</OUTCOME>
+	<OUTCOME>B4</OUTCOME>
+	<PROPERTY>position = (7303.0, 5211.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Sector 2</NAME>
+	<OUTCOME>B1</OUTCOME>
+	<OUTCOME>B2</OUTCOME>
+	<OUTCOME>B3</OUTCOME>
+	<OUTCOME>B4</OUTCOME>
+	<PROPERTY>position = (7485.0, 5210.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Sector 3</NAME>
+	<OUTCOME>B1</OUTCOME>
+	<OUTCOME>B2</OUTCOME>
+	<OUTCOME>B3</OUTCOME>
+	<OUTCOME>B4</OUTCOME>
+	<PROPERTY>position = (7635.0, 5213.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Sector 4</NAME>
+	<OUTCOME>B1</OUTCOME>
+	<OUTCOME>B2</OUTCOME>
+	<OUTCOME>B3</OUTCOME>
+	<OUTCOME>B4</OUTCOME>
+	<PROPERTY>position = (7768.0, 5216.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Intersectie</NAME>
+	<OUTCOME>Stanga</OUTCOME>
+	<OUTCOME>Inainte</OUTCOME>
+	<OUTCOME>Dreapta</OUTCOME>
+	<PROPERTY>position = (7911.0, 5210.0)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>Sector 1</FOR>
+	<TABLE>0.25 0.25 0.25 0.25</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Sector 2</FOR>
+	<GIVEN>Sector 1</GIVEN>
+	<TABLE>0.75 0.25 0.0 0.0 0.25 0.5 0.25 0.0 0.0 0.25 0.5 0.25 0.0 0.0 0.25 0.75</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Sector 3</FOR>
+	<GIVEN>Sector 2</GIVEN>
+	<TABLE>0.75 0.25 0.0 0.0 0.25 0.5 0.25 0.0 0.0 0.25 0.5 0.25 0.0 0.0 0.25 0.75</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Sector 4</FOR>
+	<GIVEN>Sector 3</GIVEN>
+	<TABLE>0.75 0.25 0.0 0.0 0.25 0.5 0.25 0.0 0.0 0.25 0.5 0.25 0.0 0.0 0.25 0.75</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Intersectie</FOR>
+	<GIVEN>Sector 4</GIVEN>
+	<TABLE>0.75 0.25 0.0 0.25 0.75 0.0 0.0 0.75 0.25 0.0 0.25 0.75</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>
