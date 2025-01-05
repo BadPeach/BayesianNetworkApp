@@ -35,6 +35,11 @@
             queryButton = new Button();
             graphPanel = new Panel();
             queryNodeComboBox = new ComboBox();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            quitToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // loadButton
@@ -80,9 +85,38 @@
             queryNodeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             queryNodeComboBox.Location = new Point(50, 20);
             queryNodeComboBox.Name = "queryNodeComboBox";
-            queryNodeComboBox.Size = new Size(200, 28);
+            queryNodeComboBox.Size = new Size(200, 23);
             queryNodeComboBox.TabIndex = 4;
-            queryNodeComboBox.SelectedIndexChanged += queryNodeComboBox_SelectedIndexChanged;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(725, 24);
+            menuStrip1.TabIndex = 5;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "File";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Text = "About";
+            aboutToolStripMenuItem.Click += aboutClick;
+            // 
+            // quitToolStripMenuItem
+            // 
+            quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            quitToolStripMenuItem.Size = new Size(180, 22);
+            quitToolStripMenuItem.Text = "Quit";
+            quitToolStripMenuItem.Click += quitClick;
             // 
             // Form1
             // 
@@ -92,8 +126,14 @@
             Controls.Add(loadButton);
             Controls.Add(graphPanel);
             Controls.Add(queryNodeComboBox);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -101,5 +141,9 @@
         private Button loadButton;
         private Button setEvidenceButton;
         private Button queryButton;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
+        private ToolStripMenuItem quitToolStripMenuItem;
     }
 }
